@@ -1,0 +1,73 @@
+/* Ensure full-page layout doesn't overflow horizontally */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.App {
+  text-align: center;
+}
+
+/* App Logo */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal center */
+  justify-content: center; /* Vertical center if needed */
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Optional: center text for child components */
+.app-wrapper > * {
+  text-align: center;
+}
+
+
+/* Disable animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .App-logo {
+    animation: none;
+  }
+}
+
+/* App Header Styling */
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* App Links */
+.App-link {
+  color: #61dafb;
+}
+
+/* Logo Spin Animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
