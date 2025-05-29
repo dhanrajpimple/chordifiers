@@ -22,12 +22,12 @@ const HeroSection = () => {
 
         <h1
           className="text-2xl sm:text-3xl font-jakarta md:text-6xl lg:text-6xl font-medium leading-tight"
-          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)' }}
+          style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.4)' , fontFamily: 'Plus Jakarta Sans, serif'  }}
         >
           Your Record Label, Production House <br className="hidden sm:block" /> & Music Institute
         </h1>
 
-        <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium">
+        <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl font-medium font-inter">
           "You Love being Creative? We Love You"
         </p>
       </div>

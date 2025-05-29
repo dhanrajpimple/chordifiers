@@ -2,7 +2,7 @@ import React from 'react';
 import tcs from '../../assets/tcs.jpg'
 export default function Abouthome() {
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-[#F0E81B]  p-8">
+    <div className="min-h-screen flex flex-col font-inter bg-[#F0E81B]  p-8">
       <h1 className="text-4xl font-bold text-yellow-600 mb-4 text-center">
         Welcome to The Chordifiers Studio
       </h1>

@@ -15,7 +15,7 @@ const ProMusicServices = () => {
 
       {/* Right Side - Text */}
       <div className="flex-1 min-w-[300px] max-w-[600px] px-2">
-        <h3 className="text-[24px] md:text-[60px] text-black font-light leading-tight font-['Plus_Jakarta_Sans']">
+        <h3 className="text-[24px] md:text-[60px] text-black font-light leading-tight " style={{ fontFamily: 'Plus Jakarta Sans, serif' }}>
           Looking for Pro Music Services?
         </h3>
       </div>

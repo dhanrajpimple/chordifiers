@@ -31,7 +31,7 @@ export default function TestimonialCarousel() {
       className="w-full bg-cover bg-center min-h-[70vh] flex items-center justify-center px-4"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="bg-white rounded-lg shadow-lg border border-blue-500 p-6 max-w-xl w-full text-center">
+      <div className="bg-white rounded-lg shadow-lg border border-blue-500 p-6 max-w-xl w-full text-center"  style={{ fontFamily: 'Roboto, serif' }}>
         <p className="text-gray-800 text-base md:text-lg leading-relaxed mb-6">
           {current.text}
         </p>

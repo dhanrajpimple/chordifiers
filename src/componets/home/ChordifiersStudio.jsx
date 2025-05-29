@@ -7,7 +7,7 @@ export default function ChordifiersStudio() {
   return (
     <div
       className="bg-[#fcee09] px-5 py-16 text-center font-serif"
-      style={{ fontFamily: 'Georgia, serif' }}
+       style={{ fontFamily: 'Plus Jakarta Sans, serif' }}
     >
       <h1 className="text-[3rem] mb-5 leading-tight sm:text-4xl">The Chordifiers Studio</h1>
       <p className="text-base mb-2">Client Rating (+50 on Google Maps)</p>

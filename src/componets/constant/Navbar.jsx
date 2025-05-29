@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from '../../assets/logo.png'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -42,13 +42,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-black text-white w-full sticky z-50 font-jakarta text-l">
+    <nav className="bg-black text-white w-full sticky z-50 font-jakarta text-l py-3">
       <div className="max-w-7xl mx-auto flex justify-between items-center  px-6 md:px-0">
         <Link to="/" onClick={handleLinkClick}>
           <img
-            src="https://the-codifiers-studio.s3.ap-south-1.amazonaws.com/4d9261216de606e1cb701ad4448c05c248a6e160+(1).png"
+            src={logo}
             alt="theChordifiersStudio"
-            className="h-16 md:h-28 w-auto"
+            className="h-16 md:h-20 w-auto"
           />
         </Link>
 

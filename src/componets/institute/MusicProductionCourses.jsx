@@ -55,13 +55,13 @@ export default function MusicProductionCourses() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left mb-8">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h1 className="text-2xl text-center sm:text-left sm:text-4xl lg:text-5xl font-bold font-sans text-white mb-6">
             Music Production Courses
           </h1>
           
           {/* Limited Seats Banner */}
           <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl">
-            <h2 className="text-xl sm:text-4xl font-bold text-black mb-1">
+            <h2 className="text-2xl sm:text-4xl font-normal text-black mb-1" style={{ fontFamily: 'Crimson Text, serif' }}>
               Limited Seats Available
             </h2>
             <p className="text-black text-sm sm:text-xl">
@@ -93,7 +93,7 @@ export default function MusicProductionCourses() {
 
               {/* Course Title */}
               <div className="p-4">
-                <h3 className="text-white font-semibold text-center mb-4 text-sm sm:text-base">
+                <h3 className="text-white font-semibold text-center mb-4 text-sm sm:text-lg" style={{ fontFamily: 'Crimson Text, serif' }}>
                   {course.title}
                 </h3>
 

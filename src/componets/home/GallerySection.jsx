@@ -41,10 +41,10 @@ const GallerySection = () => {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 max-w-6xl mx-auto">
         {/* Left Text */}
         <div className="flex-1">
-          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-gray-900"  style={{ fontFamily: 'Plus Jakarta Sans, serif' }}>
             Photo Gallery
           </h2>
-          <p className="text-gray-600 text-sm md:text-base max-w-lg leading-relaxed">
+          <p className="text-gray-600 text-sm md:text-base max-w-lg leading-relaxed"  style={{ fontFamily: 'Roboto, serif' }}>
             Experience the magic of The Chordflare Studio through our photo gallery. From inspiring sessions to behind-the-scenes moments, every image captures the heart of our music-making journey.
           </p>
         </div>

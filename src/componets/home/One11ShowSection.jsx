@@ -16,7 +16,7 @@ const One11ShowSection = () => {
         />
       </h2>
 
-      <p className="max-w-3xl mx-auto text-[14px] sm:text-lg md:text-[25px] leading-relaxed mt-6 font-['Commissioner']">
+      <p className="max-w-3xl mx-auto text-[14px] sm:text-lg md:text-[25px] leading-relaxed mt-6 " style={{ fontFamily: 'Commissioner, serif' }}>
         <strong>“The One11 Show”</strong> is an artist launch platform by The Chordifiers Studio, that focuses on
         launching artists and creators of various niches into the world.
       </p>
@@ -25,7 +25,7 @@ const One11ShowSection = () => {
         <ImageCarousel />
       </div>
 
-      <h4 className="text-[16px] sm:text-2xl md:text-[40px] leading-snug mt-6 font-['Rubik']">
+      <h4 className="text-[16px] sm:text-2xl md:text-[40px] leading-snug mt-6 " style={{ fontFamily: 'Rubik, serif' }}>
         Click here to register for
         <br />
         “The ONE11 Show”

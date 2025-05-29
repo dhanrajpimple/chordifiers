@@ -29,8 +29,8 @@ const LatestSignedArtists = () => {
     <section className="bg-black text-white w-full pt-16 ">
       {/* Header */}
       <div className="text-center mb-12 px-5 ">
-        <h2 className="text-3xl md:text-5xl font-semibold mb-4">Our latest Signed artist</h2>
-        <p className="text-sm md:text-lg max-w-3xl mx-auto text-gray-300 font-light">
+        <h2 className="text-3xl md:text-5xl font-semibold mb-4"  style={{ fontFamily: 'Plus Jakarta Sans, serif' }}>Our latest Signed artist</h2>
+        <p className="text-sm md:text-lg max-w-3xl mx-auto text-gray-300 font-light"  style={{ fontFamily: 'Roboto, serif' }}>
           Meet the newest talent to join our creative family. With a unique sound and undeniable passion, this artist is set to make waves in the music industry. Stay tuned for their upcoming releases, exclusive performances, and more as they embark on an exciting journey with us.
         </p>
       </div>
@@ -52,8 +52,8 @@ const LatestSignedArtists = () => {
               />
             </div>
             <div className="text-center md:text-left max-w-xl">
-              <h3 className="text-2xl font-bold mb-2">{artist.name}</h3>
-              <p className="text-sm md:text-base text-gray-300">{artist.description}</p>
+              <h3 className="text-2xl font-bold mb-2"  style={{ fontFamily: 'Playfair Display, serif' }}>{artist.name}</h3>
+              <p className="text-sm md:text-base text-gray-300"  style={{ fontFamily: 'Roboto, serif' }}>{artist.description}</p>
             </div>
           </div>
         ))}
