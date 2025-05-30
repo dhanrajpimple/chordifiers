@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import courseimage from '../../assets/course.jpg'
+import courseimage from '../../assets/course.jpg';
+import image1 from "../../assets/1.jpg"
+import image2 from "../../assets/2.jpg"
+import image3 from "../../assets/3.jpg"
+import image4 from "../../assets/4.jpg"
 export default function MusicProductionCourses() {
   const [expandedCards, setExpandedCards] = useState({});
 
@@ -17,28 +21,28 @@ export default function MusicProductionCourses() {
       id: 'basic',
       level: 'BASIC',
       title: 'Music Production Basic',
-      image: courseimage,
+      image: image1,
       color: 'from-yellow-400 to-orange-500'
     },
     {
       id: 'intermediate',
       level: 'INTERMEDIATE',
       title: 'Music Production Intermediate',
-      image: courseimage,
+      image: image2,
       color: 'from-purple-400 to-pink-500'
     },
     {
       id: 'advance',
       level: 'ADVANCE',
       title: 'Music Production Advance',
-      image: courseimage,
+      image: image3,
       color: 'from-blue-400 to-purple-500'
     },
     {
       id: 'pro',
       level: 'PRO',
       title: 'Music Production Pro',
-      image: courseimage,
+      image: image4,
       color: 'from-green-400 to-blue-500'
     }
   ];
@@ -55,19 +59,19 @@ export default function MusicProductionCourses() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left mb-8">
-          <h1 className="text-2xl text-center sm:text-left sm:text-4xl lg:text-5xl font-bold font-sans text-white mb-6">
-            Music Production Courses
+          <h1 className="text-2xl text-center sm:text-left sm:text-5xl lg:text-7xl font-bold font-sans text-white mb-6">
+           Professional Certification Courses
           </h1>
           
           {/* Limited Seats Banner */}
-          <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl">
+          {/* <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl">
             <h2 className="text-2xl sm:text-4xl font-normal text-black mb-1" style={{ fontFamily: 'Crimson Text, serif' }}>
               Limited Seats Available
             </h2>
             <p className="text-black text-sm sm:text-xl">
               Get your seat as soon as possible!
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* Courses Grid */}
@@ -81,14 +85,14 @@ export default function MusicProductionCourses() {
                   alt={course.title}
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black opacity-40"></div>
+               
                 
                 {/* Level Badge */}
-                <div className={`absolute top-4 left-4 bg-gradient-to-r ${course.color} px-3 py-1 rounded-full`}>
+                {/* <div className={`absolute top-4 left-4 bg-gradient-to-r ${course.color} px-3 py-1 rounded-full`}>
                   <span className="text-white font-bold text-sm">
                     {course.level}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Course Title */}
@@ -98,7 +102,7 @@ export default function MusicProductionCourses() {
                 </h3>
 
                 {/* FAQ Dropdowns */}
-                <div className="space-y-2">
+                <div className="space-y-2 border-gray-50 last:border-1  p-2 rounded-2xl">
                   {questions.map((question, index) => (
                     <div key={index} className="border-b border-gray-700 last:border-b-0">
                       <button
@@ -133,6 +137,17 @@ export default function MusicProductionCourses() {
           ))}
         </div>
       </div>
+       <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl my-20">
+            <h2 className="text-2xl sm:text-4xl font-normal text-black mb-1" style={{ fontFamily: 'Crimson Text, serif' }}>
+              Limited Seats Available
+            </h2>
+            <p className="text-black text-sm sm:text-xl">
+              Get your seat as soon as possible!
+            </p>
+          </div>
+          <div className='flex flex-col items-center rounded-lg text-center min-w-full text-red-600 text-3xl'>
+            EMI Options are available on prior Request
+          </div>
     </div>
   );
 }

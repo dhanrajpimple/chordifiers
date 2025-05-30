@@ -1,14 +1,14 @@
 import React from 'react'
 import ProfessionalCertificationCourses from "../componets/institute/ProfessionalCertificationCourses"
-import MusicProductionCourses from "../componets/institute/MusicProductionCourses"
-import InstrumentCourses from '../componets/institute/InstrumentCourses'
+import TCMISection from '../componets/institute/TCMISection'
 
 const Institute = () => {
   return (
    <>
+   <TCMISection/>
     <ProfessionalCertificationCourses/>
-  <MusicProductionCourses/>
-  <InstrumentCourses/>
+  
+ 
    </>
   )
 }

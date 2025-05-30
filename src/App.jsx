@@ -6,6 +6,8 @@ import Footer from './componets/constant/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Institute from './pages/Institute';
+import CertificationCourses from './pages/CertificationCourses';
+import DiplomaCourses from './pages/DiplomaCourses';
 
 function App() {
   return (
@@ -14,11 +16,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/institute" element={<Institute />} />
+        
+        {/* Institute & Nested Routes */}
+        <Route path="/institute" element={<Institute />}/>
+          <Route path="/institute/certification-courses" element={<CertificationCourses />} />
+          <Route path="/institute/diploma-courses" element={<DiplomaCourses />} />
+        
       </Routes>
       <Footer />
-      </>
-    
+    </>
   );
 }
 

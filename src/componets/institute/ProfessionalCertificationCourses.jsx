@@ -1,83 +1,102 @@
 import React from 'react';
-import sidepaino from '../../assets/sidepaino.png';
-import middel from '../../assets/middlegitter.png';
-
-const courses = [
-  {
-    number: '1',
-    image: sidepaino,
-    alt: 'Music Production Studio',
-    title: 'Music Production Courses',
-    description:
-      "Unlock your creative potential with our <strong>Music Production Courses</strong>, designed for aspiring producers and musicians of all skill levels. Whether you're a beginner eager to learn the basics of recording, mixing, and mastering or looking to refine your existing techniques, our courses cater to all.",
-  },
-  {
-    number: '2',
-    image: middel,
-    alt: 'Guitar Player',
-    title: 'Instrument Courses',
-    description:
-      "Master the art of playing your favorite instrument with our expertly designed <strong>Instrument Courses</strong>. From guitar and piano to drums and vocals, our experienced instructors and music professionals. Whether you're strumming a guitar, rocking out on the drums, or playing classical piano, we have the perfect course to match your goals and passion.",
-  },
-  {
-    number: '3',
-    image: sidepaino,
-    alt: 'Music Business Studio',
-    title: 'Music Business Course',
-    description:
-      "Turn your passion for music into a thriving career with our <strong>Music Business Course</strong>. Designed for artists, producers, and music industry professionals, this course equips you with the knowledge and tools to navigate the complex world of the music industry, build your brand, and achieve sustainable success.",
-  },
-];
+import { useNavigate } from 'react-router-dom';
+import music from "../../assets/MusicCourse.png";
+import Production from "../../assets/MusicProduction.png";
+import instrument from "../../assets/InstrumentCourse.png";
 
 const ProfessionalCertificationCourses = () => {
+  const navigate = useNavigate();
+
+  const courses = [
+    {
+      id: 1,
+      number: "1",
+      title: "Music Production Courses",
+      image: music,
+         description: "Unleash your creative potential with our Music Production Courses, designed for students aspiring to master production at all skill levels. Whether you're a beginner eager to learn the basics or an experienced producer looking to refine your techniques, our courses cater to all.",
+    },
+    {
+      id: 2,
+      number: "2",
+      title: "Instrument Courses",
+      image: instrument,
+     description: "Master the art of playing your favorite instrument with our expertly designed Instrument Courses, tailored for musicians and aspiring professionals. Whether you're strumming a guitar, rocking out on the drums, or playing classical pieces on the piano, we have the right course to match your goals and passion.",
+    },
+    {
+      id: 3,
+      number: "3",
+      title: "Music Business Course",
+      image: Production,
+        description: "Turn your passion for music into a thriving career with our Music Business Course. Designed for artists, managers, and industry professionals, this course equips you with the essential skills needed to navigate the dynamic world of the music industry, build your brand, and achieve sustainable success.",
+    }
+  ];
+
+  const handleNavigate = (type) => {
+    if (type === 'certification') {
+      navigate('/institute/certification-courses');
+    } else if (type === 'diploma') {
+      navigate('/institute/diploma-courses');
+    }
+  };
+
   return (
-    <div className="bg-white py-8 sm:py-12 md:py-16 font-inter">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header Section */}
-        <div className="text-center mb-10 md:mb-16">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4 " style={{ fontFamily: 'Plus Jakarta Sans, serif' }}>
-            Professional Certification Courses
+    <div className="bg-[#F0E81B] py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black mb-2">
+            The Courses We Offer
           </h1>
-          <p className="text-gray-600 text-base sm:text-lg font-inter">
+          <p className="text-lg sm:text-xl text-black">
             tailored to bring the best out of you!!
           </p>
         </div>
 
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6">
           {courses.map((course, index) => (
-            <div key={index} className="flex flex-col items-center">
-              {/* Number */}
-              <div className="mb-4 md:mb-6 w-full text-left">
-                <span className="text-5xl sm:text-6xl md:text-7xl font-normal text-black pl-4 sm:pl-8 md:pl-0">
+            <div key={course.id} className="flex flex-col">
+              <div className="sm:text-left text-center mb-4">
+                <span className="text-6xl sm:text-7xl lg:text-8xl font-normal text-black">
                   {course.number}
                 </span>
               </div>
 
-              {/* Image */}
-              <div className="mb-4 md:mb-6">
+              <div className="mb-6 border-b-1 border-black pb-4">
                 <img
                   src={course.image}
-                  alt={course.alt}
-                  className={`${
-                    course.number === '2'
-                      ? 'w-64 sm:w-72 md:w-96 h-64 sm:h-72 md:h-96'
-                      : 'w-64 sm:w-72 h-64 sm:h-72'
-                  } object-cover shadow-lg`}
+                  alt={course.title}
+                  className={`
+                    w-full object-cover rounded-lg shadow-lg
+                    ${index === 1
+                      ? 'h-48 sm:h-36 lg:h-36 xl:h-52'
+                      : 'h-48 sm:h-56 lg:h-48 xl:h-56'
+                    }
+                  `}
                 />
               </div>
 
-              {/* Text Content */}
-              <div className="text-center">
-                <h3
-                  className="text-lg sm:text-xl font-bold text-black mb-4 " style={{ fontFamily: 'Crimson Text, serif' }}
-                >
+              <div className="flex-1 flex flex-col">
+                <h2 className="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-bold text-black mb-4" style={{ fontFamily: 'Commissioner, serif' }}>
                   {course.title}
-                </h3>
-                <p
-                  className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-xs font-inter"
-                  dangerouslySetInnerHTML={{ __html: course.description }}
-                />
+                </h2>
+
+                <p className="text-sm sm:text-base lg:text-sm xl:text-base text-black leading-relaxed mb-6 flex-1">
+                  {course.description}
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <button
+                    onClick={() => handleNavigate('certification')}
+                    className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 bg-black text-yellow-400 hover:bg-gray-800"
+                  >
+                    Certification Courses
+                  </button>
+                  <button
+                    onClick={() => handleNavigate('diploma')}
+                    className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200  border-2 border-black  bg-black text-yellow-400"
+                  >
+                    Diploma Courses
+                  </button>
+                </div>
               </div>
             </div>
           ))}
