@@ -5,7 +5,7 @@ import d2 from "../../assets/d2.jpg"
 import d3 from "../../assets/d3.jpg"
 import d4 from "../../assets/d4.jpg"
 import d5 from "../../assets/d5.jpg"
-const ProfessionalDiplomaCourses = () => {
+const MusicCourses = () => {
   const [expandedSections, setExpandedSections] = useState({});
 
   const toggleSection = (sectionId, questionIndex) => {
@@ -17,28 +17,28 @@ const ProfessionalDiplomaCourses = () => {
   };
 
   const courses = [
-    {
-      id: 'music-production',
-      title: 'Diploma in Music Production',
-      image: d1,
-      questions: [
-        'How long is the course last?',
-        'How long to apply the course?',
-        'Are the courses offline or online?',
-        'Will I receive a certificate after completion?'
-      ]
-    },
-    {
-      id: 'sound-designing',
-      title: 'Diploma in Sound Designing',
-      image: d2,
-      questions: [
-        'How long is the course last?',
-        'How long to apply about?',
-        'Are the courses offline or online?',
-        'Will I receive a certificate after completion?'
-      ]
-    },
+    // {
+    //   id: 'music-production',
+    //   title: 'Diploma in Music Production',
+    //   image: d1,
+    //   questions: [
+    //     'How long is the course last?',
+    //     'How long to apply the course?',
+    //     'Are the courses offline or online?',
+    //     'Will I receive a certificate after completion?'
+    //   ]
+    // },
+    // {
+    //   id: 'sound-designing',
+    //   title: 'Diploma in Sound Designing',
+    //   image: d2,
+    //   questions: [
+    //     'How long is the course last?',
+    //     'How long to apply about?',
+    //     'Are the courses offline or online?',
+    //     'Will I receive a certificate after completion?'
+    //   ]
+    // },
     {
       id: 'musicproduction',
       title: 'Diploma in Music Production & Music Business (Specialization)',
@@ -50,17 +50,17 @@ const ProfessionalDiplomaCourses = () => {
         'Will I receive a certificate after completion?'
       ]
     },
-    {
-      id: 'sound-designing-Specialization',
-      title: 'Diploma in Sound Designing & Music Production  (Specialization)',
-      image: d4,
-      questions: [
-        'How long is the course last?',
-        'How long to apply about?',
-        'Are the courses offline or online?',
-        'Will I receive a certificate after completion?'
-      ]
-    },
+    // {
+    //   id: 'sound-designing-Specialization',
+    //   title: 'Diploma in Sound Designing & Music Production  (Specialization)',
+    //   image: d4,
+    //   questions: [
+    //     'How long is the course last?',
+    //     'How long to apply about?',
+    //     'Are the courses offline or online?',
+    //     'Will I receive a certificate after completion?'
+    //   ]
+    // },
     {
       id: 'sound-designing-Business',
       title: 'Diploma in Sound Designing & Music Production & Music Business (Specialization)',
@@ -152,4 +152,4 @@ const ProfessionalDiplomaCourses = () => {
   );
 };
 
-export default ProfessionalDiplomaCourses;
+export default MusicCourses;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import courseimage from '../../assets/course.jpg';
-import image1 from "../../assets/1.jpg"
+import image3 from "../../assets/1.jpg"
 import image2 from "../../assets/2.jpg"
-import image3 from "../../assets/3.jpg"
+import image1 from "../../assets/3.jpg"
 import image4 from "../../assets/4.jpg"
 export default function MusicProductionCourses() {
   const [expandedCards, setExpandedCards] = useState({});
@@ -59,7 +59,7 @@ export default function MusicProductionCourses() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-left mb-8">
-          <h1 className="text-2xl text-center sm:text-left sm:text-5xl lg:text-7xl font-bold font-sans text-white mb-6">
+          <h1 className="text-2xl text-center  sm:text-5xl lg:text-7xl font-bold font-sans text-white mb-6">
            Professional Certification Courses
           </h1>
           
@@ -137,16 +137,17 @@ export default function MusicProductionCourses() {
           ))}
         </div>
       </div>
-       <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl my-20">
-            <h2 className="text-2xl sm:text-4xl font-normal text-black mb-1" style={{ fontFamily: 'Crimson Text, serif' }}>
+       <div className="bg-[#F0E81B] flex flex-col items-center rounded-lg p-4 mx-auto max-w-7xl mt-20 mb-8 gap-3">
+            <h2 className="text-2xl sm:text-4xl font-normal text-black " style={{ fontFamily: 'Crimson Text, serif' }}>
               Limited Seats Available
             </h2>
             <p className="text-black text-sm sm:text-xl">
               Get your seat as soon as possible!
             </p>
+            <button className="px-4 py-2 rounded-xl text-sm font-bold transition-colors duration-200  border-2 border-black  bg-black text-yellow-400">Enroll Now</button>
           </div>
-          <div className='flex flex-col items-center rounded-lg text-center  min-w-full text-red-600 text-xl sm:text-3xl'>
-            EMI Options are available on prior Request
+          <div className='flex flex-col items-center rounded-lg text-center  min-w-full text-red-600 text-lg sm:text-xl'>
+           *EMI Options are available on prior Request
           </div>
     </div>
   );

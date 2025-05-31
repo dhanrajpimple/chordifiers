@@ -5,7 +5,7 @@ const CertificationCourses = () => {
   return (
     <>
     <MusicProductionCourses/>
-      <InstrumentCourses/>
+      
     </>
   )
 }

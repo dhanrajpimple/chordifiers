@@ -13,7 +13,9 @@ const ProfessionalCertificationCourses = () => {
       number: "1",
       title: "Music Production Courses",
       image: music,
-         description: "Unleash your creative potential with our Music Production Courses, designed for students aspiring to master production at all skill levels. Whether you're a beginner eager to learn the basics or an experienced producer looking to refine your techniques, our courses cater to all.",
+      description: "Unleash your creative potential with our Music Production Courses, designed for students aspiring to master production at all skill levels. Whether you're a beginner eager to learn the basics or an experienced producer looking to refine your techniques, our courses cater to all.",
+      link1 : "/institute/certification-courses",
+      link2 : "/institute/diploma-courses",
     },
     {
       id: 2,
@@ -21,6 +23,8 @@ const ProfessionalCertificationCourses = () => {
       title: "Instrument Courses",
       image: instrument,
      description: "Master the art of playing your favorite instrument with our expertly designed Instrument Courses, tailored for musicians and aspiring professionals. Whether you're strumming a guitar, rocking out on the drums, or playing classical pieces on the piano, we have the right course to match your goals and passion.",
+      link1 : "/institute/instrument-certificate",
+      link2 : "/comingsoon",
     },
     {
       id: 3,
@@ -28,16 +32,12 @@ const ProfessionalCertificationCourses = () => {
       title: "Music Business Course",
       image: Production,
         description: "Turn your passion for music into a thriving career with our Music Business Course. Designed for artists, managers, and industry professionals, this course equips you with the essential skills needed to navigate the dynamic world of the music industry, build your brand, and achieve sustainable success.",
-    }
+       link1 : "/institute/music-certificate",
+      link2 :"/comingsoon",
+      }
   ];
 
-  const handleNavigate = (type) => {
-    if (type === 'certification') {
-      navigate('/institute/certification-courses');
-    } else if (type === 'diploma') {
-      navigate('/institute/diploma-courses');
-    }
-  };
+
 
   return (
     <div className="bg-[#F0E81B] py-12 px-4 sm:px-6 lg:px-8">
@@ -83,19 +83,23 @@ const ProfessionalCertificationCourses = () => {
                   {course.description}
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3  ">
                   <button
-                    onClick={() => handleNavigate('certification')}
+                    onClick={() => navigate(course.link1)}
                     className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 bg-black text-yellow-400 hover:bg-gray-800"
                   >
                     Certification Courses
                   </button>
-                  <button
-                    onClick={() => handleNavigate('diploma')}
-                    className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200  border-2 border-black  bg-black text-yellow-400"
-                  >
-                    Diploma Courses
-                  </button>
+            {course.id !== 3 && (
+  <button
+    onClick={() => navigate(course.link2)}
+    className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 border-2 bg-black text-yellow-400 border-black"
+  >
+    Diploma Courses
+  </button>
+)}
+
+
                 </div>
               </div>
             </div>
