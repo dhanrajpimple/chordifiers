@@ -12,6 +12,7 @@ import ScrollToTop from './componets/constant/Topscroll';
 import InstrumentCertificate from './pages/InstrumentCertificate';
 import Commingsoon from './pages/Commingsoon';
 import MusicCourse from './pages/MusicCourse';
+import Musiccertificateform from './pages/Music-certificate-form';
 function App() {
   return (
     <>
@@ -28,6 +29,7 @@ function App() {
           <Route path="/institute/instrument-certificate" element={<InstrumentCertificate />} />
           <Route path="/institute/music-certificate" element={<MusicCourse/>} />
           <Route path="/comingsoon" element={<Commingsoon />} />
+          <Route path="/Music-certificate-form" element={<Musiccertificateform />} />
         
       </Routes>
       <Footer />

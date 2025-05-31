@@ -32,8 +32,8 @@ const ProfessionalCertificationCourses = () => {
       title: "Music Business Course",
       image: Production,
         description: "Turn your passion for music into a thriving career with our Music Business Course. Designed for artists, managers, and industry professionals, this course equips you with the essential skills needed to navigate the dynamic world of the music industry, build your brand, and achieve sustainable success.",
-       link1 : "/institute/music-certificate",
-      link2 :"/comingsoon",
+       link1 : "/comingsoon",
+      link2 :"/institute/music-certificate",
       }
   ];
 
@@ -84,20 +84,20 @@ const ProfessionalCertificationCourses = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3  ">
-                  <button
+                 {course.id !== 3 && (   <button
                     onClick={() => navigate(course.link1)}
                     className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 bg-black text-yellow-400 hover:bg-gray-800"
                   >
                     Certification Courses
-                  </button>
-            {course.id !== 3 && (
+                  </button> )}
+          
   <button
     onClick={() => navigate(course.link2)}
     className="px-4 py-2 rounded text-sm font-semibold transition-colors duration-200 border-2 bg-black text-yellow-400 border-black"
   >
     Diploma Courses
   </button>
-)}
+
 
 
                 </div>

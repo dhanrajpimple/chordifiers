@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import courseimage from '../../assets/course.jpg';
 import image3 from "../../assets/1.jpg"
 import image2 from "../../assets/2.jpg"
@@ -7,7 +8,7 @@ import image1 from "../../assets/3.jpg"
 import image4 from "../../assets/4.jpg"
 export default function MusicProductionCourses() {
   const [expandedCards, setExpandedCards] = useState({});
-
+    const navigate = useNavigate();
   const toggleCard = (cardId, questionId) => {
     const key = `${cardId}-${questionId}`;
     setExpandedCards(prev => ({
@@ -144,7 +145,7 @@ export default function MusicProductionCourses() {
             <p className="text-black text-sm sm:text-xl">
               Get your seat as soon as possible!
             </p>
-            <button className="px-4 py-2 rounded-xl text-sm font-bold transition-colors duration-200  border-2 border-black  bg-black text-yellow-400">Enroll Now</button>
+            <button className="px-4 py-2 rounded-xl text-sm font-bold transition-colors duration-200  border-2 border-black  bg-black text-yellow-400" onClick={()=>navigate('/Music-certificate-form')}>Enroll Now</button>
           </div>
           <div className='flex flex-col items-center rounded-lg text-center  min-w-full text-red-600 text-lg sm:text-xl'>
            *EMI Options are available on prior Request
