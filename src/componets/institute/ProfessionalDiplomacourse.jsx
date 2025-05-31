@@ -144,7 +144,7 @@ const ProfessionalDiplomaCourses = () => {
               Get your seat as soon as possible!
             </p>
           </div>
-          <div className='flex flex-col items-center rounded-lg text-center min-w-full text-red-600 text-3xl'>
+          <div className='flex flex-col items-center rounded-lg text-center min-w-full text-red-600  text-xl sm:text-3xl'>
             EMI Options are available on prior Request
           </div>
     </div>

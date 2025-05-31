@@ -79,7 +79,7 @@ export default function MusicProductionCourses() {
           {courses.map((course) => (
             <div key={course.id} className="bg-gray-900 rounded-lg overflow-hidden">
               {/* Course Image with Overlay */}
-              <div className="relative h-48 sm:h-56 lg:h-48">
+              <div className="relative h-56 sm:h-56 lg:h-48">
                 <img 
                   src={course.image}
                   alt={course.title}
@@ -145,7 +145,7 @@ export default function MusicProductionCourses() {
               Get your seat as soon as possible!
             </p>
           </div>
-          <div className='flex flex-col items-center rounded-lg text-center min-w-full text-red-600 text-3xl'>
+          <div className='flex flex-col items-center rounded-lg text-center  min-w-full text-red-600 text-xl sm:text-3xl'>
             EMI Options are available on prior Request
           </div>
     </div>
