@@ -102,25 +102,25 @@ export default function MusicProductionCourses() {
                 </h3>
 
                 {/* FAQ Dropdowns */}
-                <div className="space-y-2 border-gray-50 last:border-1  p-2 rounded-2xl">
+                <div className="space-y-2 border-gray-400 border-[0.5px]   rounded-2xl">
                   {questions.map((question, index) => (
-                    <div key={index} className="border-b border-gray-700 last:border-b-0">
+                    <div key={index} className="border-b border-gray-400 last:border-b-0">
                       <button
                         onClick={() => toggleCard(course.id, index)}
-                        className="w-full flex items-center justify-between py-2 text-left text-white hover:text-gray-300 transition-colors"
+                        className="w-full flex items-center justify-between p-2 text-left text-white hover:text-gray-300 transition-colors"
                       >
-                        <span className="text-xs sm:text-sm pr-2">
+                        <span className="text-xs sm:text-sm px-2">
                           {question}
                         </span>
                         <ChevronDown 
-                          className={`w-4 h-4 transition-transform duration-200 flex-shrink-0 ${
+                          className={`w-4 h-4 transition-transform  duration-200 flex-shrink-0 ${
                             expandedCards[`${course.id}-${index}`] ? 'rotate-180' : ''
                           }`}
                         />
                       </button>
                       
                       {expandedCards[`${course.id}-${index}`] && (
-                        <div className="pb-2 text-gray-400 text-xs sm:text-sm">
+                        <div className="px-2 text-gray-400 text-xs sm:text-sm">
                           <p>
                             {index === 0 && "Our courses typically last 8-12 weeks depending on the level."}
                             {index === 1 && "Each class is 2-3 hours long with hands-on practice sessions."}

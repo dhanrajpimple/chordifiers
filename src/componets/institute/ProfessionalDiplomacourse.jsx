@@ -83,9 +83,9 @@ const ProfessionalDiplomaCourses = () => {
         
         <div className="space-y-8 md:space-y-12 flex flex-col items-center">
           {courses.map((course) => (
-            <div key={course.id} className="max-w-xl">
+            <div key={course.id} className="max-w-xl mt-4">
               {/* Course Image and Title */}
-               <h2 className="w-full text-center text-3xl font-bold mb-5">
+               <h2 className="w-full text-center text-3xl sm:text-4xl mb-5" tyle={{ fontFamily: 'Crimson Text, serif' }}>
                     {course.title}
                   </h2>
               
@@ -103,9 +103,9 @@ const ProfessionalDiplomaCourses = () => {
               
 
               {/* FAQ Section */}
-              <div className="space-y-3 md:space-y-4  w-full">
+              <div className=" w-full mt-2">
                 {course.questions.map((question, index) => (
-                  <div key={index} className="border border-gray-700 rounded-lg overflow-hidden">
+                  <div key={index} className="border border-gray-400  overflow-hidden">
                     <button
                       onClick={() => toggleSection(course.id, index)}
                       className="w-full flex items-center justify-between p-3 md:p-4 bg-gray-900 hover:bg-gray-800 transition-colors duration-200 text-left"

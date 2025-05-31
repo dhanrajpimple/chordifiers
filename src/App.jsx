@@ -8,11 +8,12 @@ import About from './pages/About';
 import Institute from './pages/Institute';
 import CertificationCourses from './pages/CertificationCourses';
 import DiplomaCourses from './pages/DiplomaCourses';
-
+import ScrollToTop from './componets/constant/Topscroll';
 function App() {
   return (
     <>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
