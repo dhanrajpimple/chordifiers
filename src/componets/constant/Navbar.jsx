@@ -69,7 +69,7 @@ export default function Navbar() {
     setDropdownOpen(false);
   }}
 >
-  The One 11 Show
+  The One11 Show
 </a>
           <div
             ref={dropdownRef}

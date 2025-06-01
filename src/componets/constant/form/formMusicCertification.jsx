@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Music, User, Mail, Phone, GraduationCap, Award, Calendar, MessageSquare, Monitor, Users } from 'lucide-react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import { Clock, Headphones, Guitar, Piano, Mic } from 'lucide-react';
 export default function CourseRegistrationForm() {
     const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -231,8 +231,34 @@ export default function CourseRegistrationForm() {
     );
   }
 
+    const musicIcons = [
+    { Icon: Music, delay: '0s' },
+    { Icon: Headphones, delay: '0.5s' },
+    { Icon: Guitar, delay: '1s' },
+    { Icon: Piano, delay: '1.5s' },
+    { Icon: Mic, delay: '2s' }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-400 via-yellow-300 to-yellow-500 px-4 py-8">
+       <div className="absolute inset-0 overflow-hidden">
+        {musicIcons.map(({ Icon, delay }, index) => (
+          <div
+            key={index}
+            className="absolute animate-bounce opacity-10"
+            style={{
+              left: `${20 + index * 15}%`,
+              top: `${10 + index * 20}%`,
+              animationDelay: delay,
+              animationDuration: '3s'
+            }}
+          >
+            <Icon size={48} className="text-black" />
+          </div>
+        ))}
+      </div>
+
+      
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">

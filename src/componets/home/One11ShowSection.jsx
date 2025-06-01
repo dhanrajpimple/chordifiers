@@ -32,13 +32,12 @@ const One11ShowSection = () => {
       </h4>
 
       <button
-        onClick={() => {
-          navigate('/one11register');
-          window.scrollTo(0, 0);
-        }}
+  
         className="bg-black text-white mt-4 py-2 px-6 sm:py-3 sm:px-10 text-sm sm:text-base rounded-full font-bold font-sans hover:bg-gray-900 transition"
       >
-        Register Now
+       <a href="https://theone11.show"
+  target="_blank"
+  rel="noopener noreferrer"> Register Now </a>
       </button>
     </div>
   );
